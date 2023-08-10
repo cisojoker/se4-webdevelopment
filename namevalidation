@@ -12,8 +12,13 @@
   <br >
   <tr >
   <td ></td >
-  <td >< input type = "button" value = "SUBMIT" onClick =
-  "validation()" >< /td >< /tr > </form > </table > </center >
+  <td >
+    <input type = "button" value = "SUBMIT" onClick ="validation()">
+  </td >
+  </tr >
+  </form >
+  </table >
+  </center >
   <script language = "javascript" > function validation ()
 {
   var fname = f.fname.value;
