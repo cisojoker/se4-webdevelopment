@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>phone VALIDATION</title>
+  </head>
+  <body>
+    <form name="f">
+      <table align="center">
+        <h2 align="center">phone VALIDATION</h2>
+        <br>
+        <tr>
+          <td>
+            phone:
+          </td>
+          <td>
+            <input type="text" name="pw">
+          </td>
+        </tr>
+        <br>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <input type="button" value="submit" onClick="validation()"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script language="javascript">
+      function validation(){
+      var x = f.pw.value;
+      if(x.length<10 || x.length>10){
+        alert("please enter the valid number");
+      }
+      if(isNaN(x)){
+          alert("please enter the valid number");
+      }
+        else {
+          alert("valid phone number");
+        }
+      }
+    </script>
+  </body>
+</html>
