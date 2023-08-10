@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>
+      display date
+    </title>
+  </head>
+  <body>
+    <form name="f">
+    <input type="text" name="pw">
+    <br>
+    <input type="button"  value="displayDate" onClick="display()">
+    </form>
+   <script language="javascript">
+     function display(){
+       var d= new Date();
+       var date=d.getDate();
+       var month=d.getMonth();
+       month++;
+       var year=d.getFullYear();
+       f.pw.value=date+"/"+month+"/"+year;
+     }
+   </script>
+  </body>
+</html>
+////////////////////////////////////
+//ye bhi kar sakta hai
+<html>
+  <head>
+    <title>
+      display date
+    </title>
+  </head>
+  <body>
+    <input type="text" id="pw">
+    <br>
+    <input type="button"  value="displayDate" onClick="display()">
+   <script language="javascript">
+     function display(){
+       var d= new Date();
+       var date=d.getDate();
+       var month=d.getMonth();
+       month++;
+       var year=d.getFullYear();
+       document.getElementById("pw").value=date+"/"+month+"/"+year;
+     }
+   </script>
+  </body>
+</html>
