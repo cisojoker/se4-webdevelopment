@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>EMAIL VALIDATION</title>
+  </head>
+  <body>
+    <form name="f">
+      <table align="center">
+        <h2 align="center">EMAIL VALIDATION</h2>
+        <br>
+        <tr>
+          <td>
+            EMAIL:
+          </td>
+          <td>
+            <input type="text" name="pw">
+          </td>
+        </tr>
+        <br>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <input type="button" value="submit" onClick="validation()"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script language="javascript">
+      function validation(){
+  var x = f.pw.value;
+  var atposition = x.indexOf("@");
+  var dotposition = x.lastIndexOf(".");
+  
+  if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+    alert("Please enter a valid e-mail address.\n atposition: " + atposition + "\n dotposition: " + dotposition);
+    // f.pw.value="";
+  }
+        else {
+          alert("emial validated");
+        }
+      }
+    </script>
+  </body>
+</html>
