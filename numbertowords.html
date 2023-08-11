@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Words Conversion</title>
+</head>
+<body>
+  <center>
+    <form name="f">
+      <h3>enter the values between 0 to 999</h3>
+      <input type="text" id="num" value=""><br><br>
+      <input type="button" value="convert" onClick="calculate()">
+      <br><br><input type="text" name="ans">
+    </form>
+  </center>
+  <script>
+    function calculate() {
+      var x = document.getElementById("num").value;
+      if (x.length > 3) {
+        alert("Enter the value up to 999 only");
+      } else {
+        var words = "";
+        for (var i = 0; i < x.length; i++) {
+          var n = x.substr(i, 1);
+          switch (n) {
+            case '0':
+              words += "Zero ";
+              break;
+            case '1':
+              words += "One ";
+              break;
+            case '2':
+              words += "Two ";
+              break;
+            case '3':
+              words += "Three ";
+              break;
+            case '4':
+              words += "Four ";
+              break;
+            case '5':
+              words += "Five ";
+              break;
+            case '6':
+              words += "Six ";
+              break;
+            case '7':
+              words += "Seven ";
+              break;
+            case '8':
+              words += "Eight ";
+              break;
+            default:
+              words += "Nine ";
+              break;
+          }
+        }
+        f.ans.value = words;
+      }
+    }
+  </script>
+</body>
+</html>
