@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>
+      table
+    </title>
+  </head>
+  <body>
+  <form name ="f">
+    <input type="button" value="table" onClick="calculate()">  
+  </form>
+    <script language="javascript">
+      function calculate()
+        {
+       var x=parseInt(prompt("enter the numberical value"));
+        var table="";
+       for(i=1;i<=10;i++){
+         table+=x+" * "+i+"="+(x*i)+"\n";
+       }
+      alert(table);
+      }
+    </script>
+  </body>
+</html>
