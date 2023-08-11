@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Analog Clock</title>
+   <style>
+      #sizeOfAnalog {
+         position: relative;
+         margin: auto;
+         height: 90vh;
+         width: 90vh;
+      }
+      .clock-hand {
+         position: absolute;
+         background: black;
+         border-radius: 10px;
+         transform-origin: bottom;
+         opacity: 0.8;
+      }
+      #hour_clock {
+         height: 25%;
+         top: 25%;
+         left: 48.85%;
+         width: 2%;
+      }
+      #minute_clock {
+         width: 1.6%;
+         height: 32%;
+         top: 18%;
+         left: 48.9%;
+      }
+      #second_clock {
+         width: 1%;
+         height: 36%;
+         top: 14%;
+         left: 50%;
+      }
+   </style>
+</head>
+<body>
+   <div id="sizeOfAnalog">
+      <div id="hour_clock" class="clock-hand"></div>
+      <div id="minute_clock" class="clock-hand"></div>
+      <div id="second_clock" class="clock-hand"></div>
+   </div>
+   <script>
+      var hour = document.getElementById("hour_clock");
+      var minute = document.getElementById("minute_clock");
+      var seconds = document.getElementById("second_clock");
+
+      setInterval(function clock() {
+         var date_now = new Date();
+         var hr = date_now.getHours();
+         var min = date_now.getMinutes();
+         var sec = date_now.getSeconds();
+
+         hour.style.transform = "rotate(" + (hr * 30 + min / 2) + "deg)";
+         minute.style.transform = "rotate(" + (min * 6) + "deg)";
+         seconds.style.transform = "rotate(" + (sec * 6) + "deg)";
+      }, 1000);
+   </script>
+</body>
+</html>
