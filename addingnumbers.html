@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>
+      table
+    </title>
+  </head>
+  <body>
+  <form name ="f">
+    <input type="button" value="start" onClick="calculate()">  
+    <h1 id="ans">answer will display here</h1>
+  </form>
+    <script language="javascript">
+        function calculate() {
+      var x = parseInt(prompt("Enter the numerical value"));
+      
+      while (confirm("Do you want to add more numbers?")) {
+        var y = parseInt(prompt("Enter the numerical value"));
+        x += y;
+      }
+      document.getElementById("ans").innerHTML = "Sum: " + x;
+        }
+    </script>
+  </body>
+</html>
