@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>
+      country
+    </title>
+  </head>
+  <body>
+    <center>
+      <h1>
+        select the country whose capital you want to see
+      </h1>
+      <form name="myform">
+select country: <select name="country" id="first" onClick="calculate()" required>
+<option value=""></option>
+<option value="NEW DELHI">INDIA</option>
+<option value="CANBERRA">AUSTRALIA</option>
+<option value="WASHINGTON D.C">AMERICA</option>
+<option value="LONDON">UNITEDKINGDOM</option>
+<option value="BERLIN">GERMANY</option>
+</select><br><br>
+capital: <input type="text" id="second"></form>
+    </center>
+    <script language="javascript">
+      function calculate(){
+        var x=document.getElementById("first").value;
+        document.getElementById("second").value=x;
+      }
+    </script>  </body>
+</html>
